@@ -1,4 +1,92 @@
 {
-  "java.configuration.updateBuildConfiguration": "interactive",
-  "java.compile.nullAnalysis.mode": "automatic"
+  "boot-java.rewrite.reconcile": true,
+  "java.inlayHints.parameterNames.enabled": "none",
+  "terminal.integrated.env.windows": {
+    "JAVA_HOME": "C:\\DEV25\\jdk-22",
+    "GRADLE_USER_HOME": "C:\\DEV25\\TEMP\\gradle-data",
+    "PROMPT": "> ",
+    "encoding": "UTF-8",
+  },
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "source": "PowerShell",
+      "icon": "terminal-powershell",
+      "args": [
+        "-ExecutionPolicy",
+        "Bypass"
+      ],
+    },
+  },
+  "maven.terminal.customEnv": [
+    {
+      "environmentVariable": "JAVA_HOME",
+      "value": "C:\\DEV25\\jdk-22"
+    },
+  ],
+  "java.gradle.buildServer.enabled": "off",
+  "openInDefaultBrowser.run.openWithLocalHttpServer": false,
+  "css.styleSheets": [
+    "src/main/resources/static/css/**/*.css",
+  ],
+  "files.exclude": {
+    "bin": true
+  },
+  "editor.mouseWheelZoom": true,
+  "explorer.sortOrder": "type",
+  "workbench.editor.highlightModifiedTabs": true,
+  "workbench.editor.wrapTabs": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.detectIndentation": false,
+  "editor.insertSpaces": true,
+  "editor.indentSize": "tabSize",
+  "editor.tabSize": 2,
+  "editor.linkedEditing": true,
+  "editor.minimap.enabled": false,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "[json][jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features",
+  },
+  "[javascript][javascriptreact][typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features",
+  },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features",
+  },
+  "[css][scss][less]": {
+    "editor.defaultFormatter": "vscode.css-language-features",
+  },
+  "[java]": {
+    "editor.defaultFormatter": "redhat.java",
+    "editor.insertSpaces": false,
+    "editor.tabSize": 4,
+    "editor.indentSize": "tabSize",
+  },
+  "[sql]": {
+    "editor.insertSpaces": false,
+    "editor.tabSize": 3,
+    "editor.indentSize": "tabSize",
+  },
+  "[xml]": {
+    "editor.defaultFormatter": "redhat.vscode-xml"
+  },
+  "spring.dashboard.openWith": "external",
+  "spring.tools.openWith": "external",
+  "java.compile.nullAnalysis.mode": "automatic",
+  "java.format.settings.url": "C:\\DEV25\\VSCode-devappli\\data\\eclipse-formatter-EA.xml",
+  "git.autofetch": true,
+  "git.allowForcePush": true,
+  "git.confirmSync": false,
+  "java.configuration.runtimes": [
+    {
+      "name": "JavaSE-22",
+      "path": "C:\\DEV25\\jdk-22",
+      "sources": "C:\\DEV25\\jdk-22\\lib\\src.zip",
+      "javadoc": "https://docs.oracle.com/en/java/javase/22/docs/api",
+      "default": true
+    },
+  ],
+  "java.import.gradle.java.home": "C:\\DEV25\\jdk-22",
+  "java.import.gradle.user.home": "C:\\DEV25\\TEMP\\gradle-data",
 }
