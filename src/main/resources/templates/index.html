@@ -27,6 +27,7 @@
       <div class="col-12 col-sm-6 ps-lg-5 d-flex flex-column Xjustify-content-center">
 
         <!-- Titre en haut de la page -->
+        <div class="alert text-center bg-secondary-subtle"> <span th:text="${alert}"> Mot de passe errone</span> </div>
         <h2 class="text-center">Connexion</h2>
 
         <!-- Espacement vertical -->
@@ -36,7 +37,7 @@
         <div class="mx-auto" style="max-width: 30rem;">
 
           <!-- Formulaire de saisie -->
-          <form class="mb-auto" th:action="@{/bonjour}" method="get">
+          <form class="mb-auto" th:action="@{/connect}" method="get">
 
             <!-- Identifiant -->
             <div class="row my-4">
@@ -51,7 +52,7 @@
             <!-- Mot de passe -->
             <div class="row my-4">
               <div class="col-12 col-xl-5">
-                <label for="motDePasse" class="col-form-label">Mot de passe</label>
+                <label for="motDePasse" class="col-form-label"> Mot de passe </label>
               </div>
               <div class="col">
                 <input type="password" id="motDePasse" class="form-control" name="password" required></input>
