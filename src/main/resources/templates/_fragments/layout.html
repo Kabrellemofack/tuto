@@ -1,0 +1,31 @@
+<!-- _fragments/layout.html -->
+
+<!-- Pied de page réutilisable -->
+<footer th:fragment="footer">
+  <div class="bg-dark text-bg-dark pt-2 pb-5 text-center">
+    © La Cantine - Groupe Scolaire Duverger
+  </div>
+</footer>
+
+<!-- En-tête de page réutilisable -->
+<header th:fragment="header" class="sticky-top">
+  <nav class="navbar navbar-expand bg-success navbar-dark" style="height: 3rem;">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white" href="#">La Cantine</a>
+
+      <!-- Lien Se déconnecter -->
+      <a class="nav-link text-white" th:href="@{/disconnect}" th:if="${connected != null}">
+        Se déconnecter
+      </a>
+    </div>
+  </nav>
+</header>
+
+<!-- En-tête HTML avec titre dynamique -->
+
+<head th:fragment="head(titre)">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title th:text="${titre} + ' - Tuto'">Titre par défaut</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>

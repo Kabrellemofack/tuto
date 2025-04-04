@@ -1,89 +1,77 @@
 <!doctype html>
 <html lang="fr">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Connexion - Tuto</title>
-  <link rel="stylesheet" href="css/styles.css" />
-</head>
+<head th:replace="~{_fragments/layout :: head('Connexion')}"></head>
 
 <body>
 
-  <!-- -->
-  <!-- En-tête de page - barre de navigation -->
-  <!-- -->
-  <header class="sticky-top">
-    <nav class="bg-success" style="height: 3rem;"></nav>
-  </header>
+  <!-- En-tête de page -->
+  <header th:replace="~{_fragments/layout :: header}"></header>
 
-  <!-- -->
-  <!-- Contenu de la page -->
-  <!-- -->
+  <!-- Contenu principal -->
   <section class="container my-3">
     <div class="row">
 
-      <!-- Colonne 1 -->
-      <div class="col-12 col-sm-6 ps-lg-5 d-flex flex-column Xjustify-content-center">
+      <!-- Colonne 1 : Formulaire de connexion -->
+      <div class="col-12 col-sm-6 ps-lg-5 d-flex flex-column justify-content-center">
 
-        <!-- Titre en haut de la page -->
-        <div class="alert text-center bg-secondary-subtle"> <span th:text="${alert}"> Mot de passe errone</span> </div>
+        <!-- Messages d'alerte -->
+        <div class="alert text-center bg-secondary-subtle">
+          <span th:text="${alert}"></span>
+        </div>
+        <div class="alert text-center bg-light">
+          <span th:text="${connected}"></span>
+        </div>
+
+        <!-- Titre -->
         <h2 class="text-center">Connexion</h2>
 
-        <!-- Espacement vertical -->
         <div class="py-2 py-lg-4"></div>
 
-        <!-- Ajustement en largeur -->
+        <!-- Formulaire -->
         <div class="mx-auto" style="max-width: 30rem;">
-
-          <!-- Formulaire de saisie -->
           <form class="mb-auto" th:action="@{/connect}" method="get">
 
-            <!-- Identifiant -->
+            <!-- Champ identifiant -->
             <div class="row my-4">
               <div class="col-12 col-xl-5">
                 <label for="username" class="form-label">Identifiant</label>
               </div>
               <div class="col">
-                <input type="text" id="username" class="form-control" name="username" required autofocus></input>
+                <input type="text" id="username" class="form-control" name="username" />
               </div>
             </div>
 
-            <!-- Mot de passe -->
+            <!-- Champ mot de passe -->
             <div class="row my-4">
               <div class="col-12 col-xl-5">
-                <label for="motDePasse" class="col-form-label"> Mot de passe </label>
+                <label for="motDePasse" class="col-form-label">Mot de passe</label>
               </div>
               <div class="col">
-                <input type="password" id="motDePasse" class="form-control" name="password" required></input>
+                <input type="password" id="motDePasse" class="form-control" name="password" />
               </div>
             </div>
 
-            <!-- Boutons en bas du formulaire -->
+            <!-- Bouton de connexion -->
             <div class="text-center mt-4 mt-xl-5 mb-5">
-              <input type="submit" class="btn btn-primary" value="Se connecter">
+              <input type="submit" class="btn btn-primary" value="Se connecter" />
             </div>
 
-          </form> <!-- Fin Formulaire de saisie -->
-
-        </div> <!-- Fin Ajustement en largeur -->
+          </form>
+        </div> <!-- Fin formulaire -->
 
       </div> <!-- Fin Colonne 1 -->
 
-      <!-- Colonne 2, photo -->
+      <!-- Colonne 2 : Image -->
       <div class="col-12 col-sm-6 my-3 d-flex align-items-center justify-content-center">
-        <img class="img-fluid" src="img/photos/photo02.jpg">
-      </div> <!-- Fin Colonne 2 -->
+        <img class="img-fluid" src="img/photos/photo02.jpg" alt="Image de connexion">
+      </div>
 
     </div>
-  </section> <!-- Fin Contenu de la page -->
+  </section>
 
-  <!-- -->
   <!-- Pied de page -->
-  <!-- -->
-  <footer>
-    <div class="bg-dark text-bg-dark pt-2 pb-5 text-center">© La Cantine</div>
-  </footer>
+  <footer th:replace="~{_fragments/layout :: footer}"></footer>
 
 </body>
 
