@@ -14,9 +14,16 @@
       <a class="navbar-brand text-white" href="#">La Cantine</a>
 
       <!-- Lien Se déconnecter -->
-      <a class="nav-link text-white" th:href="@{/disconnect}" th:if="${connected != null}">
-        Se déconnecter
-      </a>
+
+
+      <form action="#" method="POST" th:action="@{/disconnect}" th:if="${connected != null}">
+
+        <button class="nav-link" type="submit">Se déconnecter</button>
+
+      </form>
+
+
+
     </div>
   </nav>
 </header>
